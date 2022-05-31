@@ -16,7 +16,7 @@ const Details = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:4500/api/foods/${id}`)
+        fetch(`https://foooodify.herokuapp.com/api/foods/${id}`)
             .then((res) => res.json())
             .then((data) => setItem(data))
     }, []);

@@ -28,7 +28,7 @@ function App() {
   const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4500/api/foods')
+        fetch('https://foooodify.herokuapp.com/api/foods')
             .then((res) => res.json())
             .then((data) => setItems(data))
     }, []);
