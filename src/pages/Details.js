@@ -7,12 +7,11 @@ import FaqCard from '../components/FaqCard';
 import InstructionCard from '../components/InstructionCard';
 
 const Details = () => {
-    const [item, setItem] = useState([])
+    const [item, setItem] = useState({})
     const [categories, setCategories] = useState([])
     const [faqs, setFaqs] = useState([])
     const [instructions, setInstructions] = useState([])
     const [blogs, setBlogs] = useState([])
-
     const { id } = useParams()
 
     useEffect(() => {
@@ -28,11 +27,9 @@ const Details = () => {
         setInstructions(item.instructions)
     }, [item])
 
-    console.log(item.categories)
-
     return (
         <Box>
-            <Box
+            {item.banner ? <Box
                 sx={{
                     maxHeight: '100vh',
                     overflow: 'hidden',
@@ -41,7 +38,7 @@ const Details = () => {
                 }}
             >
                 <img width={'60%'} src={item.banner} alt="" />
-            </Box>
+            </Box> : null}
 
             <Container>
                 <Box>

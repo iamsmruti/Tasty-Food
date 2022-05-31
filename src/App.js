@@ -25,7 +25,7 @@ const theme = createTheme({
 })
 
 function App() {
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState()
 
     useEffect(() => {
         fetch('https://foooodify.herokuapp.com/api/foods')
